@@ -1,0 +1,15 @@
+on:
+  workflow_dispatch:
+  push:
+    branches:
+    - develop
+
+jobs:
+  nuke:
+    runs-on: windows-latest
+    steps:
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3.2.0
+      - name: 'Nuke Build'
+        run: '$(Build.SourcesDirectory)/build.ps1 --target distbuild'
+        working-directory: '$(Build.SourcesDirectory)'
