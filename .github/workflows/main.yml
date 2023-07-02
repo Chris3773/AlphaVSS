@@ -12,4 +12,3 @@ jobs:
         uses: actions/setup-dotnet@v3.2.0
       - name: 'Nuke Build'
         run: '$(Build.SourcesDirectory)/build.ps1 --target distbuild'
-        working-directory: '$(Build.SourcesDirectory)'
