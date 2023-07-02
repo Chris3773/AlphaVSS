@@ -11,4 +11,4 @@ jobs:
       - name: Setup .NET Core SDK
         uses: actions/setup-dotnet@v3.2.0
       - name: 'Nuke Build'
-        run: '$(Build.SourcesDirectory)/build.ps1 --target distbuild'
+        run: './build.ps1 --target distbuild'
