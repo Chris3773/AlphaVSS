@@ -20,6 +20,7 @@ namespace Alphaleonis {
             m_IVssBackupComponentsEx(0),
             m_IVssBackupComponentsEx2(0),
             m_IVssBackupComponentsEx3(0),
+            m_IVssBackupComponentsEx4(0),
             m_writerMetadata(nullptr),
             m_writerComponents(nullptr),
             m_writerStatus(nullptr)
@@ -62,6 +63,12 @@ namespace Alphaleonis {
             {
                m_IVssBackupComponentsEx3->Release();
                m_IVssBackupComponentsEx3 = 0;
+            }
+
+            if (m_IVssBackupComponentsEx4 != 0)
+            {
+               m_IVssBackupComponentsEx4->Release();
+               m_IVssBackupComponentsEx4 = 0;
             }
          }
 
