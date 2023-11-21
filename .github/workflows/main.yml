@@ -1,16 +1,16 @@
-#on:
-#  workflow_dispatch:
-#  push:
-#    branches:
-#    - develop
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - develop
 
-#jobs:
-#  nuke:
-#    runs-on: windows-latest
-#    steps:
-#      - name: Check out repository code
-#        uses: actions/checkout@v3.5.3
-#      - name: Setup .NET Core SDK
-#        uses: actions/setup-dotnet@v3.2.0
-#      - name: 'Nuke Build'
-#        run: './build.ps1 --target distbuild'
+jobs:
+  nuke:
+    runs-on: windows-latest
+    steps:
+      - name: Check out repository code
+        uses: actions/checkout@v3.5.3
+      - name: Setup .NET Core SDK
+        uses: actions/setup-dotnet@v3.2.0
+      - name: 'Nuke Build'
+        run: './build.ps1 --target distbuild'
